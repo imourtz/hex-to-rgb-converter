@@ -12,7 +12,11 @@ export class Results extends React.Component {
           </div>
           <ul className='pl-0'>
             {history?.map((item, index) => {
-              return <Output item={item} index={index} />;
+              return (
+                <div key={index}>
+                  <Output item={item} index={index} />
+                </div>
+              );
             })}
           </ul>
           <div className='d-flex justify-content-center'>
